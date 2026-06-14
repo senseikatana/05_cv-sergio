@@ -1,0 +1,14 @@
+---
+interface Props {
+  title: string;
+  avoidBreak?: boolean;
+  class?: string;
+  titleClass?: string;
+}
+
+const { title, avoidBreak = true, class: className = '', titleClass = 'mb-4' } = Astro.props;
+---
+<section class={`${avoidBreak ? 'avoid-break' : ''} ${className}`}>
+  <h2 class={`eyebrow ${titleClass}`}>{title}</h2>
+  <slot />
+</section>

@@ -1,0 +1,54 @@
+---
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  accent?: 'terra' | 'teal' | 'violet';
+  currentPage?: string;
+}
+
+const { title, description, accent = 'terra', currentPage = '' } = Astro.props;
+const isHome = currentPage === 'home';
+---
+
+<!DOCTYPE html>
+<html lang="es" data-accent={accent}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>{title}</title>
+    
+    <!-- Inline blocking script to set theme and avoid flash of light theme -->
+    <script is:inline>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          var sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var dark = saved ? saved === 'dark' : sysDark;
+          document.documentElement.classList.toggle('dark', dark);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <Header currentPage={currentPage} />
+    <slot />
+    <Footer isHome={isHome} />
+    
+    <!-- Inline listener script for preferences color scheme change -->
+    <script is:inline>
+      try {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+          if (!localStorage.getItem('theme')) {
+            document.documentElement.classList.toggle('dark', e.matches);
+          }
+        });
+      } catch (e) {}
+    </script>
+  </body>
+</html>

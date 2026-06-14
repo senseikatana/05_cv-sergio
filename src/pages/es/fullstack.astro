@@ -1,0 +1,98 @@
+---
+import Layout from '../../components/Layout.astro';
+import CVSection from '../../components/CVSection.astro';
+import TimelineItem from '../../components/TimelineItem.astro';
+---
+
+<Layout
+  title="Fullstack & Creativo Digital · Sergio Jurado"
+  description="Construyo productos web rápidos y bonitos, del concepto al despliegue, cuidando el detalle visual."
+  accent="teal"
+  currentPage="fullstack"
+>
+  <main class="container-x py-12 sm:py-16">
+    <div class="print-only hidden mb-4">
+      <h1 class="font-display text-2xl">Sergio Jurado</h1>
+      <p class="text-sm text-ink-soft">Desarrollador Fullstack · Diseño Creativo Digital</p>
+      <p class="mt-1 text-xs text-ink-muted">sergiojurado.casado@gmail.com · +34 637 723 747 · Cambrils, Tarragona</p>
+      <div class="rule mt-3"></div>
+    </div>
+
+    <section class="reveal mb-12 sm:mb-16">
+      <p class="eyebrow">Fullstack & Creativo Digital</p>
+      <h1 class="mt-3 text-hero text-[clamp(2.25rem,7vw,4.5rem)] leading-[1.02]">Desarrollador Fullstack · Diseño Creativo Digital</h1>
+      <p class="mt-5 max-w-prose text-base leading-relaxed text-ink-soft sm:text-lg">Construyo productos web rápidos y bonitos, del concepto al despliegue, cuidando el detalle visual.</p>
+      <div class="no-print mt-7 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-muted">
+        <span>Cambrils, Tarragona</span>
+        <a href="mailto:sergiojurado.casado@gmail.com" class="link-underline">sergiojurado.casado@gmail.com</a>
+        <span>+34 637 723 747</span>
+      </div>
+    </section>
+
+    <div class="cv-grid grid gap-10 sm:gap-14 md:grid-cols-[1fr_1.9fr]">
+      <div class="space-y-10">
+        <CVSection title="Sobre mí">
+          <p class="text-[0.95rem] leading-relaxed text-ink-soft">Aprendiz autodidacta apasionado por la tecnología y el diseño digital. Formación en diseño multimedia y 3D, combinada con experiencia práctica en desarrollo web. Me motiva crear interfaces limpias y funcionales, y estoy en constante evolución para aportar soluciones creativas al mundo digital.</p>
+        </CVSection>
+
+        <CVSection title="Habilidades">
+          <ul class="flex flex-wrap gap-2">
+            <li class="chip">HTML / CSS / JavaScript</li>
+            <li class="chip">TypeScript</li>
+            <li class="chip">React · Astro · Next.js</li>
+            <li class="chip">Node.js · Express</li>
+            <li class="chip">Tailwind CSS</li>
+            <li class="chip">Git · GitHub</li>
+            <li class="chip">Diseño UI/UX</li>
+            <li class="chip">Diseño 3D y Multimedia</li>
+          </ul>
+        </CVSection>
+
+        <CVSection title="Formación">
+          <ul class="space-y-4">
+            <li>
+              <p class="text-[0.95rem] font-medium text-ink">Curso de Diseño Multimedia y 3D</p>
+              <p class="text-sm text-ink-muted">ESI, Valladolid · 2020 (6 meses)</p>
+            </li>
+            <li>
+              <p class="text-[0.95rem] font-medium text-ink">CFGM I Laboratorio de Imagen</p>
+              <p class="text-sm text-ink-muted">Valladolid · 2008 — 2010</p>
+            </li>
+            <li>
+              <p class="text-[0.95rem] font-medium text-ink">Formación autodidacta en desarrollo web</p>
+              <p class="text-sm text-ink-muted">Plataformas online · 2023 — Actualidad</p>
+            </li>
+          </ul>
+        </CVSection>
+      </div>
+
+      <div class="space-y-12">
+        <CVSection title="Experiencia" avoidBreak={false} titleClass="mb-6">
+          <div class="space-y-8">
+            <TimelineItem
+              title="Desarrollador Web · Proyectos personales"
+              date="2024 — Presente"
+              subtitle="Autodidacta · Portfolio propio"
+              details={[
+                "Construcción de este portfolio con HTML, CSS y diseño responsivo.",
+                "Implementación de modo oscuro, modo impresión y animaciones CSS.",
+                "Gestión del proyecto con Git y GitHub."
+              ]}
+            />
+
+            <TimelineItem
+              title="Experiencia en Tecnología"
+              date="2020 — Presente"
+              subtitle="Formación continua"
+              details={[
+                "Aprendizaje activo de JavaScript, TypeScript, React, Astro y Node.js.",
+                "Conocimientos de diseño 3D y multimedia aplicados al entorno digital.",
+                "Resolución de problemas y capacidad de aprendizaje técnico rápido."
+              ]}
+            />
+          </div>
+        </CVSection>
+      </div>
+    </div>
+  </main>
+</Layout>

@@ -1,0 +1,157 @@
+---
+import Layout from '../../components/Layout.astro';
+import CVSection from '../../components/CVSection.astro';
+import TimelineItem from '../../components/TimelineItem.astro';
+---
+
+<Layout
+  title="Logística y Almacén · Sergio Jurado"
+  description="Coordinación de almacén, control de stock y optimización de procesos de picking y expedición."
+  accent="terra"
+  currentPage="logistica"
+>
+  <main class="container-x py-12 sm:py-16">
+    <div class="print-only hidden mb-4">
+      <h1 class="font-display text-2xl">Sergio Jurado</h1>
+      <p class="text-sm text-ink-soft">Operario de Logística y Gestión de Almacén</p>
+      <p class="mt-1 text-xs text-ink-muted">sergiojurado.casado@gmail.com · +34 637 723 747 · Cambrils, Tarragona</p>
+      <div class="rule mt-3"></div>
+    </div>
+
+    <section class="reveal mb-12 sm:mb-16">
+      <p class="eyebrow">Logística y Almacén</p>
+      <h1 class="mt-3 text-hero text-[clamp(2.25rem,7vw,4.5rem)] leading-[1.02]">Operario de Logística y Gestión de Almacén</h1>
+      <p class="mt-5 max-w-prose text-base leading-relaxed text-ink-soft sm:text-lg">Coordinación de almacén, control de stock y optimización de procesos de picking y expedición.</p>
+      <div class="no-print mt-7 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-muted">
+        <span>Cambrils, Tarragona</span>
+        <a href="mailto:sergiojurado.casado@gmail.com" class="link-underline">sergiojurado.casado@gmail.com</a>
+        <span>+34 637 723 747</span>
+      </div>
+    </section>
+
+    <div class="cv-grid grid gap-10 sm:gap-14 md:grid-cols-[1fr_1.9fr]">
+      <div class="space-y-10">
+        <CVSection title="Sobre mí">
+          <p class="text-[0.95rem] leading-relaxed text-ink-soft">Profesional de logística con experiencia en distribución urbana, reparto de pedidos y gestión de rutas. Orientado a la eficiencia, la puntualidad y el trato directo con el cliente. Capacidad demostrada en entornos dinámicos y colaboración con grandes cuentas de restauración.</p>
+        </CVSection>
+
+        <CVSection title="Habilidades">
+          <ul class="flex flex-wrap gap-2">
+            <li class="chip">Distribución y reparto urbano</li>
+            <li class="chip">Optimización de rutas logísticas</li>
+            <li class="chip">Carretilla elevadora (carné vigente)</li>
+            <li class="chip">Gestión de stock y aprovisionamiento</li>
+            <li class="chip">Atención al cliente</li>
+            <li class="chip">Coordinación con grandes cuentas</li>
+            <li class="chip">Mantenimiento de instalaciones</li>
+            <li class="chip">Organización y orden</li>
+          </ul>
+        </CVSection>
+
+        <CVSection title="Formación">
+          <ul class="space-y-4">
+            <li>
+              <p class="text-[0.95rem] font-medium text-ink">Activitats Auxiliars de Comerç i MKT</p>
+              <p class="text-sm text-ink-muted">Novatecnica, VilaSeca · 2026</p>
+            </li>
+            <li>
+              <p class="text-[0.95rem] font-medium text-ink">Operador de Carretons Elevadors, retractil i transpaleta</p>
+              <p class="text-sm text-ink-muted">IDFO, Reus · 2024</p>
+            </li>
+            <li>
+              <p class="text-[0.95rem] font-medium text-ink">CFGM I Laboratorio de Imagen</p>
+              <p class="text-sm text-ink-muted">Valladolid · 2008 — 2010</p>
+            </li>
+            <li>
+              <p class="text-[0.95rem] font-medium text-ink">Educación Secundaria Obligatoria (E.S.O)</p>
+              <p class="text-sm text-ink-muted">Valladolid · 2005 — 2008</p>
+            </li>
+          </ul>
+        </CVSection>
+
+        <CVSection title="Idiomas">
+          <ul class="space-y-2 text-[0.95rem] text-ink-soft">
+            <li><span class="font-medium text-ink">Español:</span> Nativo</li>
+            <li><span class="font-medium text-ink">Catalán:</span> Nivel básico (comprensión)</li>
+            <li><span class="font-medium text-ink">Inglés:</span> Nivel A2 (básico funcional)</li>
+          </ul>
+        </CVSection>
+
+        <CVSection title="Datos de interés">
+          <ul class="flex flex-wrap gap-2">
+            <li class="chip">Diversidad funcional (33%)</li>
+            <li class="chip">Permiso de conducir B</li>
+            <li class="chip">Disponibilidad horaria total</li>
+            <li class="chip">Certificado de discapacidad</li>
+          </ul>
+        </CVSection>
+      </div>
+
+      <div class="space-y-12">
+        <CVSection title="Experiencia" avoidBreak={false} titleClass="mb-6">
+          <div class="space-y-8">
+            <TimelineItem
+              title="Operario de Mantenimiento y Jardinería"
+              date="Mar 2025 — Dic 2025"
+              subtitle="Ayuntamiento de Salou"
+              details={[
+                "Tareas operativas y mantenimiento de infraestructuras públicas.",
+                "Desbrozadora de espacios públicos, calles y jardines.",
+                "Plantación y tratamiento de flores en zonas públicas de Salou."
+              ]}
+            />
+
+            <TimelineItem
+              title="Auxiliar de Hostelería y Camarero de Pisos"
+              date="May 2024 — Jun 2024"
+              subtitle="Bar Las Cadenas S.C.P"
+              details={[
+                "Atención al cliente en barra y servicio de mesa.",
+                "Mantenimiento integral, orden y limpieza de las instalaciones.",
+                "Gestión de stock y aprovisionamiento de mercancías."
+              ]}
+            />
+
+            <TimelineItem
+              title="Repartidor Logístico"
+              date="2024"
+              subtitle="Passos de Cuinar, Cambrils"
+              details={[
+                "Distribución urbana de pedidos garantizando tiempos de entrega."
+              ]}
+            />
+
+            <TimelineItem
+              title="Repartidor Logístico"
+              date="Jun 2023 — Nov 2023"
+              subtitle="Uber Eats, Cambrils"
+              details={[
+                "Gestión de rutas y entrega eficiente de productos alimentarios."
+              ]}
+            />
+
+            <TimelineItem
+              title="Repartidor Logístico"
+              date="Oct 2021 — Nov 2023"
+              subtitle="GlovoApp S.L, Cambrils"
+              details={[
+                "Distribución a domicilio y optimización de rutas logísticas.",
+                "Colaboración directa con grandes cuentas de restauración."
+              ]}
+            />
+
+            <TimelineItem
+              title="Recepcionista y Atención al Cliente"
+              date="Jun 2020 — Nov 2020"
+              subtitle="Centro Municipal Deportivo, Valladolid"
+              details={[
+                "Gestión administrativa de socios y resolución de incidencias.",
+                "Limpieza y orden del establecimiento."
+              ]}
+            />
+          </div>
+        </CVSection>
+      </div>
+    </div>
+  </main>
+</Layout>

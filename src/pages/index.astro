@@ -1,52 +1,70 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Navbar from '../components/Navbar.astro';
-import Hero from '../components/Hero.astro';
-import ValueProposition from '../components/ValueProposition.astro';
-import Skills from '../components/Skills.astro';
-import Languages from '../components/Languages.astro';
-import Experience from '../components/Experience.astro';
-import Education from '../components/Education.astro';
-import Projects from '../components/Projects.astro';
-import Certifications from '../components/Certifications.astro';
-import Downloads from '../components/Downloads.astro';
-import ContactForm from '../components/ContactForm.astro';
-import Footer from '../components/Footer.astro';
+import Layout from '../components/Layout.astro';
+import CVLink from '../components/CVLink.astro';
+import profileImg from '../assets/IMG20260602084233~2 (1).jpg';
 ---
 
-<BaseLayout>
-  <Navbar />
+<Layout
+  title="Sergio Jurado · Portfolio · CV digital"
+  description="Portfolio creativo y CV digital de Sergio Jurado."
+  accent="terra"
+  currentPage="home"
+>
+  <main>
+    <div class="container-x py-12 sm:py-16">
+      <div class="grid gap-10 md:grid-cols-[1fr_1.2fr] md:items-start">
+        <!-- Columna izquierda: presentación -->
+        <div class="space-y-8">
+          <div class="flex items-center gap-3.5">
+            <svg width="42" height="42" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <rect width="32" height="32" rx="7" class="fill-ink"></rect>
+              <path
+                d="M10 22V10h5.2c2.6 0 4.3 1.4 4.3 3.6 0 1.6-.9 2.7-2.3 3.1L20 22h-2.6l-2.4-4.6H12V22h-2zm2-6.3h2.9c1.3 0 2.1-.6 2.1-1.8s-.8-1.8-2.1-1.8H12v3.6z"
+                class="fill-paper"></path>
+            </svg>
+            <div>
+              <h1 class="font-display text-3xl leading-tight text-ink">Sergio Jurado</h1>
+              <p class="eyebrow mt-1">Portfolio · CV digital</p>
+            </div>
+          </div>
 
-  <main class="main-wrapper container">
-    <div class="a4-paper">
-      <div class="a4-grid">
+          <div class="rule"></div>
 
-        <Hero />
-        <ValueProposition />
+          <p class="text-base leading-relaxed text-ink-soft">
+            Tres perfiles, una misma actitud: rigor, detalle y ganas de aportar. Cada CV está listo para ver online o
+            imprimir.
+          </p>
 
-        <div class="col-left space-y">
-          <Skills />
-          <Languages />
-        </div>
+          <div class="space-y-3">
+            <CVLink
+              href="/es/logistica"
+              title="Logística y Almacén"
+              description="Coordinación, stock, picking y expedición"
+            />
+            <CVLink
+              href="/es/fullstack"
+              title="Fullstack & Creativo Digital"
+              description="Productos web, del concepto al despliegue"
+            />
+            <CVLink
+              href="/es/generico"
+              title="Perfil Genérico"
+              description="Polivalente, resolutivo y organizado"
+            />
+          </div>
 
-        <div class="col-right">
-          <Experience />
-          <Projects />
-          <Certifications />
-          <Education />
-          <Downloads />
-          <ContactForm />
-
-          <div class="print-only" style="border-top:1px solid #ccc;padding-top:1.5rem;margin-top:1.5rem;text-align:center;">
-            <p style="font-size:0.875rem;color:#666;">
-              Versión impresa. Para acceder al CV interactivo y contactarme directamente, visita: <strong>www.tu-web-personal.com</strong>
-            </p>
+          <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-muted">
+            <span>Cambrils, Tarragona</span>
+            <a href="mailto:sergiojurado.casado@gmail.com" class="link-underline">sergiojurado.casado@gmail.com</a>
+            <span>+34 637 723 747</span>
           </div>
         </div>
 
+        <!-- Columna derecha: foto -->
+        <figure class="md:sticky md:top-24 profile-figure">
+          <img src={profileImg.src} alt="Sergio Jurado" class="profile-img" loading="eager" />
+        </figure>
       </div>
     </div>
   </main>
-
-  <Footer />
-</BaseLayout>
+</Layout>

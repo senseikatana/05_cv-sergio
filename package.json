@@ -1,22 +1,17 @@
 {
-  "name": "resume-sergio",
+  "name": "cv-sergio-jurado",
+  "version": "1.0.0",
+  "description": "CV elegante de Sergio Jurado Casado - Astro",
   "private": true,
   "type": "module",
   "scripts": {
-    "seed": "bun run src/scripts/parse-seed.ts",
     "dev": "astro dev",
-    "build": "bun run seed && astro build",
+    "start": "astro dev",
+    "build": "astro build",
     "preview": "astro preview",
-    "clean": "rm -rf dist"
+    "astro": "astro"
   },
   "dependencies": {
-    "@fontsource/inter": "^5.2.8",
-    "@fontsource/playfair-display": "^5.2.8",
-    "@tailwindcss/vite": "^4.3.0",
-    "tailwindcss": "^4.3.0"
-  },
-  "devDependencies": {
-    "astro": "^6.4.3",
-    "typescript": "^5"
+    "astro": "^5.0.0"
   }
 }

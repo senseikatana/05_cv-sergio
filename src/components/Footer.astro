@@ -1,3 +1,20 @@
-<footer class="no-print" style="text-align:center;padding:var(--space-8);font-size:var(--text-sm);color:var(--color-text-muted);">
-  <p>© 2026 Perfil Interactivo. Diseñado para aportar valor.</p>
+---
+interface Props {
+  isHome?: boolean;
+}
+
+const { isHome = false } = Astro.props;
+---
+
+<footer class={`site-footer no-print border-t border-line ${isHome ? '' : 'mt-8'}`}>
+  <div class="container-x flex flex-col gap-4 py-10 sm:flex-row sm:items-center sm:justify-between">
+    <p class="text-sm text-ink-muted">© 2026 Sergio Jurado. Portfolio creativo.</p>
+    <div class="flex flex-wrap gap-5 text-sm text-ink-soft">
+      {!isHome && (
+        <a href="mailto:sergiojurado.casado@gmail.com" class="link-underline">sergiojurado.casado@gmail.com</a>
+      )}
+      <a href="https://linkedin.com/in/sergiojurado" class="link-underline" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/senseikatana" class="link-underline" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
 </footer>
