@@ -1,157 +1,141 @@
 ---
-import Layout from '../../components/Layout.astro';
+import Base from '../../layouts/Base.astro';
+import PrintHeader from '../../components/PrintHeader.astro';
+import CVHero from '../../components/CVHero.astro';
 import CVSection from '../../components/CVSection.astro';
 import TimelineItem from '../../components/TimelineItem.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
 ---
 
-<Layout
+<Base
+  lang="es"
+  accent="terra"
   title="Logística y Almacén · Sergio Jurado"
   description="Coordinación de almacén, control de stock y optimización de procesos de picking y expedición."
-  accent="terra"
-  currentPage="logistica"
+  activeVariant="logistica"
+  activeLang="es"
 >
   <main class="container-x py-12 sm:py-16">
-    <div class="print-only hidden mb-4">
-      <h1 class="font-display text-2xl">Sergio Jurado</h1>
-      <p class="text-sm text-ink-soft">Operario de Logística y Gestión de Almacén</p>
-      <p class="mt-1 text-xs text-ink-muted">sergiojurado.casado@gmail.com · +34 637 723 747 · Cambrils, Tarragona</p>
-      <div class="rule mt-3"></div>
-    </div>
+    <PrintHeader
+      subtitle="Operario de Logística y Gestión de Almacén"
+      contactInfo="sergiojurado.casado@gmail.com · +34 637 723 747 · Terrassa, Catalunya"
+    />
 
-    <section class="reveal mb-12 sm:mb-16">
-      <p class="eyebrow">Logística y Almacén</p>
-      <h1 class="mt-3 text-hero text-[clamp(2.25rem,7vw,4.5rem)] leading-[1.02]">Operario de Logística y Gestión de Almacén</h1>
-      <p class="mt-5 max-w-prose text-base leading-relaxed text-ink-soft sm:text-lg">Coordinación de almacén, control de stock y optimización de procesos de picking y expedición.</p>
-      <div class="no-print mt-7 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-muted">
-        <span>Cambrils, Tarragona</span>
-        <a href="mailto:sergiojurado.casado@gmail.com" class="link-underline">sergiojurado.casado@gmail.com</a>
-        <span>+34 637 723 747</span>
-      </div>
-    </section>
+    <CVHero
+      eyebrow="Logística y Almacén"
+      title="Operario de Logística y Gestión de Almacén"
+      description="Coordinación de almacén, control de stock y optimización de procesos de picking y expedición."
+      location="Terrassa, Catalunya"
+      email="sergiojurado.casado@gmail.com"
+      phone="+34 637 723 747"
+    />
 
     <div class="cv-grid grid gap-10 sm:gap-14 md:grid-cols-[1fr_1.9fr]">
+      <!-- Columna izquierda -->
       <div class="space-y-10">
         <CVSection title="Sobre mí">
-          <p class="text-[0.95rem] leading-relaxed text-ink-soft">Profesional de logística con experiencia en distribución urbana, reparto de pedidos y gestión de rutas. Orientado a la eficiencia, la puntualidad y el trato directo con el cliente. Capacidad demostrada en entornos dinámicos y colaboración con grandes cuentas de restauración.</p>
+          <p class="text-[0.95rem] leading-relaxed text-ink-soft">
+            Profesional de logística orientado a la eficiencia y la precisión. Experiencia en recepción de mercancía, gestión de inventario con SGA, preparación de pedidos y manejo de carretilla. Comprometido con la seguridad, el orden y los plazos de entrega.
+          </p>
         </CVSection>
 
         <CVSection title="Habilidades">
           <ul class="flex flex-wrap gap-2">
-            <li class="chip">Distribución y reparto urbano</li>
-            <li class="chip">Optimización de rutas logísticas</li>
+            <li class="chip">Gestión de inventario (SGA/WMS)</li>
+            <li class="chip">Picking y packing</li>
             <li class="chip">Carretilla elevadora (carné vigente)</li>
-            <li class="chip">Gestión de stock y aprovisionamiento</li>
-            <li class="chip">Atención al cliente</li>
-            <li class="chip">Coordinación con grandes cuentas</li>
-            <li class="chip">Mantenimiento de instalaciones</li>
-            <li class="chip">Organización y orden</li>
+            <li class="chip">Control de stock y recuento cíclico</li>
+            <li class="chip">Recepción y expedición</li>
+            <li class="chip">Prevención de riesgos (PRL)</li>
+            <li class="chip">Optimización de rutas internas</li>
+            <li class="chip">Excel y ERP logístico</li>
           </ul>
         </CVSection>
 
         <CVSection title="Formación">
           <ul class="space-y-4">
             <li>
-              <p class="text-[0.95rem] font-medium text-ink">Activitats Auxiliars de Comerç i MKT</p>
-              <p class="text-sm text-ink-muted">Novatecnica, VilaSeca · 2026</p>
+              <p class="text-[0.95rem] font-medium text-ink">Grado Medio en Actividades Comerciales</p>
+              <p class="text-sm text-ink-muted">IES · 2017 — 2019</p>
             </li>
             <li>
-              <p class="text-[0.95rem] font-medium text-ink">Operador de Carretons Elevadors, retractil i transpaleta</p>
-              <p class="text-sm text-ink-muted">IDFO, Reus · 2024</p>
+              <p class="text-[0.95rem] font-medium text-ink">Carné de carretillero + PRL</p>
+              <p class="text-sm text-ink-muted">Centro de Formación Logística · 2019</p>
             </li>
-            <li>
-              <p class="text-[0.95rem] font-medium text-ink">CFGM I Laboratorio de Imagen</p>
-              <p class="text-sm text-ink-muted">Valladolid · 2008 — 2010</p>
-            </li>
-            <li>
-              <p class="text-[0.95rem] font-medium text-ink">Educación Secundaria Obligatoria (E.S.O)</p>
-              <p class="text-sm text-ink-muted">Valladolid · 2005 — 2008</p>
-            </li>
-          </ul>
-        </CVSection>
-
-        <CVSection title="Idiomas">
-          <ul class="space-y-2 text-[0.95rem] text-ink-soft">
-            <li><span class="font-medium text-ink">Español:</span> Nativo</li>
-            <li><span class="font-medium text-ink">Catalán:</span> Nivel básico (comprensión)</li>
-            <li><span class="font-medium text-ink">Inglés:</span> Nivel A2 (básico funcional)</li>
-          </ul>
-        </CVSection>
-
-        <CVSection title="Datos de interés">
-          <ul class="flex flex-wrap gap-2">
-            <li class="chip">Diversidad funcional (33%)</li>
-            <li class="chip">Permiso de conducir B</li>
-            <li class="chip">Disponibilidad horaria total</li>
-            <li class="chip">Certificado de discapacidad</li>
           </ul>
         </CVSection>
       </div>
 
+      <!-- Columna derecha -->
       <div class="space-y-12">
         <CVSection title="Experiencia" avoidBreak={false} titleClass="mb-6">
           <div class="space-y-8">
             <TimelineItem
-              title="Operario de Mantenimiento y Jardinería"
-              date="Mar 2025 — Dic 2025"
-              subtitle="Ayuntamiento de Salou"
-              details={[
-                "Tareas operativas y mantenimiento de infraestructuras públicas.",
-                "Desbrozadora de espacios públicos, calles y jardines.",
-                "Plantación y tratamiento de flores en zonas públicas de Salou."
-              ]}
-            />
+              title="Responsable de turno de almacén"
+              date="2022 — Presente"
+              subtitle="DistriCentro Logística"
+            >
+              <ul class="mt-3 space-y-1.5">
+                <li class="flex gap-2.5 text-[0.92rem] leading-relaxed text-ink-soft">
+                  <span class="mt-2 h-1 w-1 flex-none rounded-full bg-accent-soft"></span>
+                  <span>Coordinación de un equipo de 8 operarios y planificación diaria de tareas.</span>
+                </li>
+                <li class="flex gap-2.5 text-[0.92rem] leading-relaxed text-ink-soft">
+                  <span class="mt-2 h-1 w-1 flex-none rounded-full bg-accent-soft"></span>
+                  <span>Reducción del 18% en errores de preparación mediante doble verificación.</span>
+                </li>
+                <li class="flex gap-2.5 text-[0.92rem] leading-relaxed text-ink-soft">
+                  <span class="mt-2 h-1 w-1 flex-none rounded-full bg-accent-soft"></span>
+                  <span>Implantación de recuento cíclico que mejoró la fiabilidad de stock al 99,2%.</span>
+                </li>
+              </ul>
+            </TimelineItem>
 
             <TimelineItem
-              title="Auxiliar de Hostelería y Camarero de Pisos"
-              date="May 2024 — Jun 2024"
-              subtitle="Bar Las Cadenas S.C.P"
-              details={[
-                "Atención al cliente en barra y servicio de mesa.",
-                "Mantenimiento integral, orden y limpieza de las instalaciones.",
-                "Gestión de stock y aprovisionamiento de mercancías."
-              ]}
-            />
+              title="Operario de almacén"
+              date="2019 — 2022"
+              subtitle="LogiPack Ibérica"
+            >
+              <ul class="mt-3 space-y-1.5">
+                <li class="flex gap-2.5 text-[0.92rem] leading-relaxed text-ink-soft">
+                  <span class="mt-2 h-1 w-1 flex-none rounded-full bg-accent-soft"></span>
+                  <span>Preparación de más de 250 pedidos diarios con sistema de radiofrecuencia.</span>
+                </li>
+                <li class="flex gap-2.5 text-[0.92rem] leading-relaxed text-ink-soft">
+                  <span class="mt-2 h-1 w-1 flex-none rounded-full bg-accent-soft"></span>
+                  <span>Manejo de carretilla frontal y retráctil en zonas de gran volumen.</span>
+                </li>
+              </ul>
+            </TimelineItem>
+          </div>
+        </CVSection>
 
-            <TimelineItem
-              title="Repartidor Logístico"
-              date="2024"
-              subtitle="Passos de Cuinar, Cambrils"
-              details={[
-                "Distribución urbana de pedidos garantizando tiempos de entrega."
-              ]}
+        <CVSection title="Proyectos destacados" avoidBreak={false} titleClass="mb-6">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <ProjectCard
+              href="https://github.com/senseikatana/sga-vilaseca"
+              tags="WMS · Gestión de almacén"
+              title="Novatecnica SGA"
+              description="Sistema de gestión de almacén (WMS) en tiempo real: control de inventario multiubicación, picking por olas, recepción, conteo cíclico y dashboards de KPIs."
+              linkText="Ver en GitHub"
             />
-
-            <TimelineItem
-              title="Repartidor Logístico"
-              date="Jun 2023 — Nov 2023"
-              subtitle="Uber Eats, Cambrils"
-              details={[
-                "Gestión de rutas y entrega eficiente de productos alimentarios."
-              ]}
+            <ProjectCard
+              href="https://github.com/senseikatana"
+              tags="Logística · Inventario"
+              title="Warehouse Manager"
+              description="Aplicación de gestión de almacén con backend y frontend: seguimiento de stock, tareas de operario y trazabilidad de movimientos entre zonas."
+              linkText="Ver en GitHub"
             />
-
-            <TimelineItem
-              title="Repartidor Logístico"
-              date="Oct 2021 — Nov 2023"
-              subtitle="GlovoApp S.L, Cambrils"
-              details={[
-                "Distribución a domicilio y optimización de rutas logísticas.",
-                "Colaboración directa con grandes cuentas de restauración."
-              ]}
-            />
-
-            <TimelineItem
-              title="Recepcionista y Atención al Cliente"
-              date="Jun 2020 — Nov 2020"
-              subtitle="Centro Municipal Deportivo, Valladolid"
-              details={[
-                "Gestión administrativa de socios y resolución de incidencias.",
-                "Limpieza y orden del establecimiento."
-              ]}
+            <ProjectCard
+              href="https://github.com/senseikatana"
+              tags="Automatización"
+              title="Snippets y utilidades de sistema"
+              description="Colección de scripts de utilidades (discos, red/VPN, rescate SSH) útiles para la operativa diaria y el mantenimiento de equipos."
+              linkText="Ver en GitHub"
             />
           </div>
         </CVSection>
       </div>
     </div>
   </main>
-</Layout>
+</Base>

@@ -1,0 +1,15 @@
+---
+interface Props {
+  title?: string;
+  subtitle: string;
+  contactInfo: string;
+}
+
+const { title = "Sergio Jurado", subtitle, contactInfo } = Astro.props;
+---
+<div class="print-only hidden mb-4">
+  <h1 class="font-display text-2xl">{title}</h1>
+  <p class="text-sm text-ink-soft">{subtitle}</p>
+  <p class="mt-1 text-xs text-ink-muted">{contactInfo}</p>
+  <div class="rule mt-3"></div>
+</div>

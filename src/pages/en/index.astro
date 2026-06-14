@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProfileCard from '../../components/ProfileCard.astro';
+---
+
+<Base
+  lang="en"
+  accent="terra"
+  title="Sergio Jurado · Portfolio · Digital CV"
+  description="Portfolio creativo y CV digital de Sergio Jurado."
+  activeVariant="home"
+  activeLang="en"
+>
+  <main class="container-x py-12 sm:py-16">
+    <section class="reveal pt-8 pb-12 sm:pt-16 sm:pb-16">
+      <p class="eyebrow">Portfolio · Digital CV</p>
+      <h1 class="mt-4 max-w-4xl text-hero">Hi, I'm Sergio Jurado.</h1>
+      <p class="mt-6 max-w-prose text-base leading-relaxed text-ink-soft sm:text-lg">
+        Three profiles, one mindset: rigour, attention to detail and a real drive to contribute. Pick the version that best fits what you need — each one is ready to view and print.
+      </p>
+    </section>
+    
+    <div class="rule"></div>
+
+    <section class="reveal py-12 sm:py-16">
+      <h2 class="eyebrow mb-8">Choose a profile</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+        <ProfileCard
+          href="/en/logistica"
+          accent="terra"
+          title="Logistics & Warehouse"
+          description="Warehouse coordination, stock control and optimisation of picking and dispatch processes."
+          linkText="View CV"
+        />
+        <ProfileCard
+          href="/en/fullstack"
+          accent="teal"
+          title="Fullstack & Digital Creative"
+          description="I build fast, beautiful web products from concept to deployment, with care for visual detail."
+          linkText="View CV"
+        />
+        <ProfileCard
+          href="/en/generico"
+          accent="violet"
+          title="Generic Profile"
+          description="Resourceful, organised and eager to add value to any team."
+          linkText="View CV"
+        />
+      </div>
+    </section>
+  </main>
+</Base>

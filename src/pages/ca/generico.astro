@@ -1,0 +1,137 @@
+---
+import Base from '../../layouts/Base.astro';
+import PrintHeader from '../../components/PrintHeader.astro';
+import CVHero from '../../components/CVHero.astro';
+import CVSection from '../../components/CVSection.astro';
+import TimelineItem from '../../components/TimelineItem.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+---
+
+<Base
+  lang="ca"
+  accent="violet"
+  title="Perfil Genèric · Sergio Jurado"
+  description="Persona resolutiva, organitzada i amb ganes d’aportar valor a qualsevol equip."
+  activeVariant="generico"
+  activeLang="ca"
+>
+  <main class="container-x py-12 sm:py-16">
+    <PrintHeader
+      subtitle="Professional polivalent · Orientat a resultats"
+      contactInfo="sergiojurado.casado@gmail.com · +34 637 723 747 · Terrassa, Catalunya"
+    />
+
+    <CVHero
+      eyebrow="Perfil Genèric"
+      title="Professional polivalent · Orientat a resultats"
+      description="Persona resolutiva, organitzada i amb ganes d’aportar valor a qualsevol equip."
+      location="Terrassa, Catalunya"
+      email="sergiojurado.casado@gmail.com"
+      phone="+34 637 723 747"
+    />
+
+    <div class="cv-grid grid gap-10 sm:gap-14 md:grid-cols-[1fr_1.9fr]">
+      <!-- Columna izquierda -->
+      <div class="space-y-10">
+        <CVSection title="Sobre mi">
+          <p class="text-[0.95rem] leading-relaxed text-ink-soft">
+            Professional versàtil amb capacitat d’adaptació, comunicació i treball en equip. Combino rigor i orientació al detall amb una actitud proactiva per assumir nous reptes i aprendre ràpid.
+          </p>
+        </CVSection>
+
+        <CVSection title="Habilitats">
+          <ul class="flex flex-wrap gap-2">
+            <li class="chip">Comunicació i treball en equip</li>
+            <li class="chip">Organització i gestió del temps</li>
+            <li class="chip">Resolució de problemes</li>
+            <li class="chip">Atenció al client</li>
+            <li class="chip">Ofimàtica (Office / Google)</li>
+            <li class="chip">Idiomes: Espanyol, Català, Anglès (B2)</li>
+            <li class="chip">Adaptabilitat</li>
+            <li class="chip">Iniciativa i proactivitat</li>
+          </ul>
+        </CVSection>
+
+        <CVSection title="Formació">
+          <ul class="space-y-4">
+            <li>
+              <p class="text-[0.95rem] font-medium text-ink">Grau en Administració i Direcció d’Empreses</p>
+              <p class="text-sm text-ink-muted">Universitat · 2014 — 2018</p>
+            </li>
+            <li>
+              <p class="text-[0.95rem] font-medium text-ink">Curs de Gestió de Projectes</p>
+              <p class="text-sm text-ink-muted">Centre de Formació · 2020</p>
+            </li>
+          </ul>
+        </CVSection>
+      </div>
+
+      <!-- Columna derecha -->
+      <div class="space-y-12">
+        <CVSection title="Experiència" avoidBreak={false} titleClass="mb-6">
+          <div class="space-y-8">
+            <TimelineItem
+              title="Coordinador de projectes"
+              date="2021 — Actualitat"
+              subtitle="Empresa de serveis"
+            >
+              <ul class="mt-3 space-y-1.5">
+                <li class="flex gap-2.5 text-[0.92rem] leading-relaxed text-ink-soft">
+                  <span class="mt-2 h-1 w-1 flex-none rounded-full bg-accent-soft"></span>
+                  <span>Coordinació de tasques entre departaments i seguiment d’objectius.</span>
+                </li>
+                <li class="flex gap-2.5 text-[0.92rem] leading-relaxed text-ink-soft">
+                  <span class="mt-2 h-1 w-1 flex-none rounded-full bg-accent-soft"></span>
+                  <span>Millora de processos interns i reporting periòdic a direcció.</span>
+                </li>
+              </ul>
+            </TimelineItem>
+
+            <TimelineItem
+              title="Atenció al client"
+              date="2018 — 2021"
+              subtitle="Comerç / Serveis"
+            >
+              <ul class="mt-3 space-y-1.5">
+                <li class="flex gap-2.5 text-[0.92rem] leading-relaxed text-ink-soft">
+                  <span class="mt-2 h-1 w-1 flex-none rounded-full bg-accent-soft"></span>
+                  <span>Gestió d’incidències i suport directe a clients.</span>
+                </li>
+                <li class="flex gap-2.5 text-[0.92rem] leading-relaxed text-ink-soft">
+                  <span class="mt-2 h-1 w-1 flex-none rounded-full bg-accent-soft"></span>
+                  <span>Reconeixement per satisfacció del client i resolució eficaç.</span>
+                </li>
+              </ul>
+            </TimelineItem>
+          </div>
+        </CVSection>
+
+        <CVSection title="Projectes destacats" avoidBreak={false} titleClass="mb-6">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <ProjectCard
+              href="https://github.com/senseikatana"
+              tags="Projecte personal"
+              title="Portfolio personal"
+              description="Monorepo amb el meu portfolio i múltiples projectes web: botigues, apps i plantilles. Construït amb Astro i TypeScript."
+              linkText="Veure a GitHub"
+            />
+            <ProjectCard
+              href="https://github.com/senseikatana"
+              tags="Contingut · Documentació"
+              title="Receptes naturals"
+              description="Recopilació de receptes casolanes i productes naturals documentats pas a pas. Un projecte personal d’organització de coneixement."
+              linkText="Veure a GitHub"
+            />
+            <ProjectCard
+              href="https://github.com/senseikatana"
+              tags="Web · Catàleg"
+              title="Num Perfumes"
+              description="Projecte web de catàleg de perfums amb Astro, orientat a una presentació cuidada de producte."
+              linkText="Veure a GitHub"
+            />
+          </div>
+        </CVSection>
+      </div>
+    </div>
+  </main>
+</Base>

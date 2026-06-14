@@ -1,0 +1,137 @@
+---
+import Base from '../../layouts/Base.astro';
+import PrintHeader from '../../components/PrintHeader.astro';
+import CVHero from '../../components/CVHero.astro';
+import CVSection from '../../components/CVSection.astro';
+import TimelineItem from '../../components/TimelineItem.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+---
+
+<Base
+  lang="en"
+  accent="violet"
+  title="Generic Profile · Sergio Jurado"
+  description="Resourceful, organised and eager to add value to any team."
+  activeVariant="generico"
+  activeLang="en"
+>
+  <main class="container-x py-12 sm:py-16">
+    <PrintHeader
+      subtitle="Versatile professional · Results-driven"
+      contactInfo="sergiojurado.casado@gmail.com · +34 637 723 747 · Terrassa, Catalonia"
+    />
+
+    <CVHero
+      eyebrow="Generic Profile"
+      title="Versatile professional · Results-driven"
+      description="Resourceful, organised and eager to add value to any team."
+      location="Terrassa, Catalonia"
+      email="sergiojurado.casado@gmail.com"
+      phone="+34 637 723 747"
+    />
+
+    <div class="cv-grid grid gap-10 sm:gap-14 md:grid-cols-[1fr_1.9fr]">
+      <!-- Columna izquierda -->
+      <div class="space-y-10">
+        <CVSection title="About me">
+          <p class="text-[0.95rem] leading-relaxed text-ink-soft">
+            Versatile professional with strong adaptability, communication and teamwork. I combine rigour and attention to detail with a proactive attitude to take on new challenges and learn fast.
+          </p>
+        </CVSection>
+
+        <CVSection title="Skills">
+          <ul class="flex flex-wrap gap-2">
+            <li class="chip">Communication & teamwork</li>
+            <li class="chip">Organisation & time management</li>
+            <li class="chip">Problem solving</li>
+            <li class="chip">Customer service</li>
+            <li class="chip">Office tools (Office / Google)</li>
+            <li class="chip">Languages: Spanish, Catalan, English (B2)</li>
+            <li class="chip">Adaptability</li>
+            <li class="chip">Initiative & proactivity</li>
+          </ul>
+        </CVSection>
+
+        <CVSection title="Education">
+          <ul class="space-y-4">
+            <li>
+              <p class="text-[0.95rem] font-medium text-ink">BBA — Business Administration & Management</p>
+              <p class="text-sm text-ink-muted">University · 2014 — 2018</p>
+            </li>
+            <li>
+              <p class="text-[0.95rem] font-medium text-ink">Project Management course</p>
+              <p class="text-sm text-ink-muted">Training Centre · 2020</p>
+            </li>
+          </ul>
+        </CVSection>
+      </div>
+
+      <!-- Columna derecha -->
+      <div class="space-y-12">
+        <CVSection title="Experience" avoidBreak={false} titleClass="mb-6">
+          <div class="space-y-8">
+            <TimelineItem
+              title="Project Coordinator"
+              date="2021 — Present"
+              subtitle="Services company"
+            >
+              <ul class="mt-3 space-y-1.5">
+                <li class="flex gap-2.5 text-[0.92rem] leading-relaxed text-ink-soft">
+                  <span class="mt-2 h-1 w-1 flex-none rounded-full bg-accent-soft"></span>
+                  <span>Coordinated tasks across departments and tracked objectives.</span>
+                </li>
+                <li class="flex gap-2.5 text-[0.92rem] leading-relaxed text-ink-soft">
+                  <span class="mt-2 h-1 w-1 flex-none rounded-full bg-accent-soft"></span>
+                  <span>Improved internal processes and provided periodic reporting to management.</span>
+                </li>
+              </ul>
+            </TimelineItem>
+
+            <TimelineItem
+              title="Customer Service"
+              date="2018 — 2021"
+              subtitle="Retail / Services"
+            >
+              <ul class="mt-3 space-y-1.5">
+                <li class="flex gap-2.5 text-[0.92rem] leading-relaxed text-ink-soft">
+                  <span class="mt-2 h-1 w-1 flex-none rounded-full bg-accent-soft"></span>
+                  <span>Handled incidents and provided direct customer support.</span>
+                </li>
+                <li class="flex gap-2.5 text-[0.92rem] leading-relaxed text-ink-soft">
+                  <span class="mt-2 h-1 w-1 flex-none rounded-full bg-accent-soft"></span>
+                  <span>Recognised for customer satisfaction and effective problem solving.</span>
+                </li>
+              </ul>
+            </TimelineItem>
+          </div>
+        </CVSection>
+
+        <CVSection title="Featured projects" avoidBreak={false} titleClass="mb-6">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <ProjectCard
+              href="https://github.com/senseikatana"
+              tags="Personal project"
+              title="Personal portfolio"
+              description="Monorepo with my portfolio and multiple web projects: shops, apps and templates. Built with Astro and TypeScript."
+              linkText="View on GitHub"
+            />
+            <ProjectCard
+              href="https://github.com/senseikatana"
+              tags="Content · Documentation"
+              title="Natural recipes"
+              description="A collection of homemade recipes and natural products documented step by step. A personal knowledge-organisation project."
+              linkText="View on GitHub"
+            />
+            <ProjectCard
+              href="https://github.com/senseikatana"
+              tags="Web · Catalogue"
+              title="Num Perfumes"
+              description="Perfume catalogue web project with Astro, focused on careful product presentation."
+              linkText="View on GitHub"
+            />
+          </div>
+        </CVSection>
+      </div>
+    </div>
+  </main>
+</Base>

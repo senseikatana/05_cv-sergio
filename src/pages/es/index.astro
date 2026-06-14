@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProfileCard from '../../components/ProfileCard.astro';
+---
+
+<Base
+  lang="es"
+  accent="terra"
+  title="Sergio Jurado · Portfolio · CV digital"
+  description="Portfolio creativo y CV digital de Sergio Jurado."
+  activeVariant="home"
+  activeLang="es"
+>
+  <main class="container-x py-12 sm:py-16">
+    <section class="reveal pt-8 pb-12 sm:pt-16 sm:pb-16">
+      <p class="eyebrow">Portfolio · CV digital</p>
+      <h1 class="mt-4 max-w-4xl text-hero">Hola, soy Sergio Jurado.</h1>
+      <p class="mt-6 max-w-prose text-base leading-relaxed text-ink-soft sm:text-lg">
+        Tres perfiles, una misma actitud: rigor, detalle y ganas de aportar. Elige la versión que mejor encaje con lo que buscas — cada una está lista para ver e imprimir.
+      </p>
+    </section>
+    
+    <div class="rule"></div>
+
+    <section class="reveal py-12 sm:py-16">
+      <h2 class="eyebrow mb-8">Elige un perfil</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+        <ProfileCard
+          href="/es/logistica"
+          accent="terra"
+          title="Logística y Almacén"
+          description="Coordinación de almacén, control de stock y optimización de procesos de picking y expedición."
+          linkText="Ver CV"
+        />
+        <ProfileCard
+          href="/es/fullstack"
+          accent="teal"
+          title="Fullstack & Creativo Digital"
+          description="Construyo productos web rápidos y bonitos, del concepto al despliegue, cuidando el detalle visual."
+          linkText="Ver CV"
+        />
+        <ProfileCard
+          href="/es/generico"
+          accent="violet"
+          title="Perfil Genérico"
+          description="Persona resolutiva, organizada y con ganas de aportar valor en cualquier equipo."
+          linkText="Ver CV"
+        />
+      </div>
+    </section>
+  </main>
+</Base>

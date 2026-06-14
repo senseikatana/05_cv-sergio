@@ -1,70 +1,16 @@
 ---
-import Layout from '../components/Layout.astro';
-import CVLink from '../components/CVLink.astro';
-import profileImg from '../assets/IMG20260602084233~2 (1).jpg';
+import Base from '../layouts/Base.astro';
 ---
-
-<Layout
-  title="Sergio Jurado · Portfolio · CV digital"
-  description="Portfolio creativo y CV digital de Sergio Jurado."
-  accent="terra"
-  currentPage="home"
->
-  <main>
-    <div class="container-x py-12 sm:py-16">
-      <div class="grid gap-10 md:grid-cols-[1fr_1.2fr] md:items-start">
-        <!-- Columna izquierda: presentación -->
-        <div class="space-y-8">
-          <div class="flex items-center gap-3.5">
-            <svg width="42" height="42" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <rect width="32" height="32" rx="7" class="fill-ink"></rect>
-              <path
-                d="M10 22V10h5.2c2.6 0 4.3 1.4 4.3 3.6 0 1.6-.9 2.7-2.3 3.1L20 22h-2.6l-2.4-4.6H12V22h-2zm2-6.3h2.9c1.3 0 2.1-.6 2.1-1.8s-.8-1.8-2.1-1.8H12v3.6z"
-                class="fill-paper"></path>
-            </svg>
-            <div>
-              <h1 class="font-display text-3xl leading-tight text-ink">Sergio Jurado</h1>
-              <p class="eyebrow mt-1">Portfolio · CV digital</p>
-            </div>
-          </div>
-
-          <div class="rule"></div>
-
-          <p class="text-base leading-relaxed text-ink-soft">
-            Tres perfiles, una misma actitud: rigor, detalle y ganas de aportar. Cada CV está listo para ver online o
-            imprimir.
-          </p>
-
-          <div class="space-y-3">
-            <CVLink
-              href="/es/logistica"
-              title="Logística y Almacén"
-              description="Coordinación, stock, picking y expedición"
-            />
-            <CVLink
-              href="/es/fullstack"
-              title="Fullstack & Creativo Digital"
-              description="Productos web, del concepto al despliegue"
-            />
-            <CVLink
-              href="/es/generico"
-              title="Perfil Genérico"
-              description="Polivalente, resolutivo y organizado"
-            />
-          </div>
-
-          <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-muted">
-            <span>Cambrils, Tarragona</span>
-            <a href="mailto:sergiojurado.casado@gmail.com" class="link-underline">sergiojurado.casado@gmail.com</a>
-            <span>+34 637 723 747</span>
-          </div>
-        </div>
-
-        <!-- Columna derecha: foto -->
-        <figure class="md:sticky md:top-24 profile-figure">
-          <img src={profileImg.src} alt="Sergio Jurado" class="profile-img" loading="eager" />
-        </figure>
-      </div>
-    </div>
-  </main>
-</Layout>
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0; url=/es/">
+  <link rel="canonical" href="/es/">
+  <title>Sergio Jurado &middot; Portfolio</title>
+  <script type="module">window.location.replace("/es/");</script>
+</head>
+<body>
+  <a href="/es/">Ir al portfolio</a>
+</body>
+</html>
