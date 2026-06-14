@@ -1,0 +1,24 @@
+---
+import { skillGroups } from '../data/index';
+---
+
+<div class="section-fade">
+  {skillGroups.map((group) => (
+    <div class="skill-group">
+      <h3 class="title-small" data-i18n={group.titleI18n}>{group.title}</h3>
+      <div>
+        {group.skills.map((s) => (
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">{s.name}</span>
+              <span class="skill-pct" style={s.color ? `color:${s.color}` : ''}>{s.pct}%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style={`--val: ${s.pct}%;${s.color ? `background-color:${s.color};` : ''}`}></div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>

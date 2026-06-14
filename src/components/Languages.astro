@@ -1,0 +1,16 @@
+---
+import { languages } from '../data/index';
+---
+
+<div class="section-fade">
+  <h3 class="title-small" data-i18n="about.languages">Idiomas</h3>
+  <div>
+    {languages.map((l) => (
+      <div class="info-row">
+        <span style="font-size:var(--text-sm);font-weight:500;" data-i18n={l.nameI18n}>{l.name}</span>
+        <span class="badge" style="background:var(--color-bg-surface-alt);"
+              data-i18n={l.levelI18n ?? ''}>{l.level}</span>
+      </div>
+    ))}
+  </div>
+</div>

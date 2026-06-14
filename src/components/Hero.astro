@@ -1,0 +1,21 @@
+---
+import { heroData } from '../data/index';
+---
+
+<div class="hero-header section-fade">
+  <div>
+    <h1 class="h1-name" data-i18n={heroData.nameI18n}>{heroData.name}</h1>
+    <p class="hero-subtitle" data-i18n={heroData.professionalI18n}>{heroData.professional}</p>
+  </div>
+  <div style="text-align: right;">
+    <span class="badge badge-success no-print">
+      <span style="width:6px;height:6px;background:var(--color-success);border-radius:50%;display:inline-block;"></span>
+      <span data-i18n={heroData.availableI18n}>{heroData.available}</span>
+    </span>
+    <div class="hero-contact">
+      <a href={`mailto:${heroData.email}`}>{heroData.email}</a>
+      <span>|</span>
+      <span>{heroData.location}</span>
+    </div>
+  </div>
+</div>

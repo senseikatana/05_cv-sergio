@@ -1,0 +1,22 @@
+{
+  "name": "resume-sergio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "seed": "bun run src/scripts/parse-seed.ts",
+    "dev": "astro dev",
+    "build": "bun run seed && astro build",
+    "preview": "astro preview",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/playfair-display": "^5.2.8",
+    "@tailwindcss/vite": "^4.3.0",
+    "tailwindcss": "^4.3.0"
+  },
+  "devDependencies": {
+    "astro": "^6.4.3",
+    "typescript": "^5"
+  }
+}
