@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProfileCard from '../../components/ProfileCard.astro';
+---
+
+<Base
+  lang="ca"
+  accent="terra"
+  title="Sergio Jurado · Portfolio · CV digital"
+  description="Portfolio creativo y CV digital de Sergio Jurado."
+  activeVariant="home"
+  activeLang="ca"
+>
+  <main class="container-x py-12 sm:py-16">
+    <section class="reveal pt-8 pb-12 sm:pt-16 sm:pb-16">
+      <p class="eyebrow">Portfolio · CV digital</p>
+      <h1 class="mt-4 max-w-4xl text-hero">Hola, soc en Sergio Jurado.</h1>
+      <p class="mt-6 max-w-prose text-base leading-relaxed text-ink-soft sm:text-lg">
+        Tres perfils, una mateixa actitud: rigor, detall i ganes d’aportar. Tria la versió que millor encaixi amb el que busques — cadascuna està llesta per veure i imprimir.
+      </p>
+    </section>
+    
+    <div class="rule"></div>
+
+    <section class="reveal py-12 sm:py-16">
+      <h2 class="eyebrow mb-8">Tria un perfil</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+        <ProfileCard
+          href="/ca/logistica"
+          accent="terra"
+          title="Logística i Magatzem"
+          description="Coordinació de magatzem, control d’estoc i optimització de processos de picking i expedició."
+          linkText="Veure CV"
+        />
+        <ProfileCard
+          href="/ca/fullstack"
+          accent="teal"
+          title="Fullstack i Creatiu Digital"
+          description="Construeixo productes web ràpids i bonics, del concepte al desplegament, cuidant el detall visual."
+          linkText="Veure CV"
+        />
+        <ProfileCard
+          href="/ca/generico"
+          accent="violet"
+          title="Perfil Genèric"
+          description="Persona resolutiva, organitzada i amb ganes d’aportar valor a qualsevol equip."
+          linkText="Veure CV"
+        />
+      </div>
+    </section>
+  </main>
+</Base>

@@ -1,4 +1,9 @@
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  site: 'https://senseikatana.github.io/14_cv-sergiojurado',
+  trailingSlash: 'always',
+  build: {
+    format: 'directory',
+  },
+});

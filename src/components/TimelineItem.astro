@@ -3,10 +3,9 @@ interface Props {
   title: string;
   date: string;
   subtitle: string;
-  details?: string[];
 }
 
-const { title, date, subtitle, details = [] } = Astro.props;
+const { title, date, subtitle } = Astro.props;
 ---
 <article class="avoid-break border-l-2 border-line pl-5">
   <div class="flex flex-wrap items-baseline justify-between gap-x-4">
@@ -14,16 +13,5 @@ const { title, date, subtitle, details = [] } = Astro.props;
     <span class="text-sm text-ink-muted">{date}</span>
   </div>
   <p class="mt-0.5 text-sm font-medium text-accent">{subtitle}</p>
-  {details.length > 0 ? (
-    <ul class="mt-3 space-y-1.5">
-      {details.map((detail) => (
-        <li class="flex gap-2.5 text-[0.92rem] leading-relaxed text-ink-soft">
-          <span class="mt-2 h-1 w-1 flex-none rounded-full bg-accent-soft" />
-          <span>{detail}</span>
-        </li>
-      ))}
-    </ul>
-  ) : (
-    <slot />
-  )}
+  <slot />
 </article>

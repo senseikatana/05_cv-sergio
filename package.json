@@ -1,17 +1,17 @@
 {
-  "name": "cv-sergio-jurado",
-  "version": "1.0.0",
-  "description": "CV elegante de Sergio Jurado Casado - Astro",
-  "private": true,
+  "name": "14_cv-sergiojurado",
   "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.0.0"
+    "astro": "^6.4.6"
   }
 }
